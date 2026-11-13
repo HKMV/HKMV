@@ -38,14 +38,14 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 
 ## 技术栈与数据
 
-| 用途 | 用到的东西 |
+| 用&nbsp;途 | 用到的东西 |
 |---|---|
-| 系统 | Arch Linux、macOS、Windows |
-| 语言 | Rust、Go、C#、TypeScript、Java、AutoHotkey |
-| 桌面端 | Rust 原生：GPUI、iced、egui，以及 FLTK（C++ 库，经 `fltk-rs` 绑定）；Rust 套壳：Tauri；Go 套壳：Wails；Java 生态：JavaFX、JxBrowser（嵌入 Chromium）；另有 WPF、Avalonia、Vue、Svelte |
-| 嵌入式 | ESP32 系（ESP32-S3）、Rust no_std（embassy / espflash / embedded-graphics）、LVGL |
-| 服务与运维 | Docker Compose、Caddy、内网穿透与反向代理 |
-| 私有组网 | EasyTier（主用）、NetBird（备用），研究过 Tailscale / ZeroTier / vnt |
+| 系&nbsp;统 | Arch Linux、macOS、Windows |
+| 语&nbsp;言 | Rust、Go、C#、TypeScript、Java、AutoHotkey |
+| 桌&nbsp;面&nbsp;端 | Rust 原生：GPUI、iced、egui，以及 FLTK（C++ 库，经 `fltk-rs` 绑定）；Rust 套壳：Tauri；Go 套壳：Wails；Java 生态：JavaFX、JxBrowser（嵌入 Chromium）；另有 WPF、Avalonia、Vue、Svelte |
+| 嵌&nbsp;入&nbsp;式 | ESP32 系（ESP32-S3）、Rust no_std（embassy / espflash / embedded-graphics）、LVGL |
+| 服&nbsp;务&nbsp;与&nbsp;运&nbsp;维 | Docker Compose、Caddy、内网穿透与反向代理 |
+| 私&nbsp;有&nbsp;组&nbsp;网 | EasyTier（主用）、NetBird（备用），研究过 Tailscale / ZeroTier / vnt |
 
 <details>
 <summary>star 分布（3,787 个）—— 数据比自我介绍更诚实</summary>
