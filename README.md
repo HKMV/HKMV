@@ -23,9 +23,7 @@
 
 ### [devroute](https://github.com/HKMV/devroute) — 本地开发调试用的转发工具
 
-Rust + FLTK 纯原生 GUI（非 Tauri / Electron，不内嵌浏览器内核），约 **3MB** 单文件，GUI 空闲内存 3.4MB、`--headless` 模式 2.5MB。两种**互相独立、可各自启停**的用法：**本地镜像**（本地端口直接提供远端页面，接口转发到本地服务 —— 不依赖系统代理，没有 CORS / Cookie 跨域问题，支持 https 上游与内网自签证书）与 **SOCKS5 / HTTP 代理**（同一端口自动识别两种协议，按 `Host + 路径前缀` 匹配转发并重写路径）。
-
-带深浅色主题、中英文界面、实时日志与统计、崩溃残留的系统代理自清理；Windows / macOS / Linux 预编译产物（Linux 静态链接，Arch 解压即用）→ [Releases](https://github.com/HKMV/devroute/releases/latest)
+Rust + FLTK 纯原生 GUI，**3MB** 单文件、GUI 空闲 **3.4MB**、`--headless` **2.5MB**；本地镜像与 SOCKS5/HTTP 代理两种模式各自独立启停，用法与已知边界见 [项目 README](https://github.com/HKMV/devroute)。
 
 ### [tun2proxy-gui](https://github.com/HKMV/tun2proxy-gui) — tun2proxy 的跨平台桌面图形前端
 
