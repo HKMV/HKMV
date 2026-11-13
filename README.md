@@ -42,7 +42,7 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 |---|---|
 | 系统 | Arch Linux、macOS、Windows |
 | 语言 | Rust、Go、C#、TypeScript、Java、AutoHotkey |
-| 桌面端 | GPUI、FLTK、WPF、Svelte |
+| 桌面端 | 原生渲染：GPUI、FLTK、iced、egui；WebView 套壳：Tauri、Wails、JxBrowser；另有 WPF、Svelte |
 | 嵌入式 | ESP32 系（ESP32-S3）、Rust no_std（embassy / espflash / embedded-graphics）、LVGL |
 | 服务与运维 | Docker Compose、Caddy、内网穿透与反向代理 |
 | 私有组网 | EasyTier（主用）、NetBird（备用），研究过 Tailscale / ZeroTier / vnt |
@@ -69,7 +69,7 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 
 ## 关注的方向
 
-- **Rust 跨平台桌面与系统层工具**：原生渲染优先于套壳，体积与内存占用优先于功能堆叠
+- **Rust 跨平台桌面与系统层工具**：四种范式都动过手 —— 立即模式（egui）、声明式（iced）、原生绑定（FLTK / GPUI）、WebView 套壳（Tauri / Wails / JxBrowser）。落到自己项目上选原生渲染，因为**体积与内存占用是硬指标，不是加分项**：一个 3MB、空闲 3.4MB 的转发工具，才有资格让人随手双击起来
 - **AI 编码代理与技能生态**：Claude Code / Codex / MCP / agent skills 的日常重度使用
 - **Windows 与 macOS 提效小工具**：窗口管理、OCR、剪贴板、输入法这一类每天要点几百次的东西
 - **Linux 内核与发行版定制**：日常跑 Arch，也跟内核分支与驱动层的改动（star 里集中在 kernel / tkg / zen 这一类）
@@ -106,7 +106,7 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 
 ## English
 
-Developer working mostly in **Rust**: native cross-platform desktop tools and network-forwarding utilities — real native GUI, no WebView, single small binary. Ships for Windows, macOS and Linux (Arch included), and also runs internal infrastructure (Docker + Caddy) and industrial automation platforms.
+Developer working mostly in **Rust**: native cross-platform desktop tools and network-forwarding utilities — real native GUI, no WebView, single small binary. Has worked across the whole Rust GUI spectrum (immediate mode `egui`, declarative `iced`, native bindings FLTK / GPUI, and WebView shells Tauri / Wails / JxBrowser), and picks native rendering because binary size and idle memory are hard requirements, not nice-to-haves. Ships for Windows, macOS and Linux (Arch included), and also runs internal infrastructure (Docker + Caddy) and industrial automation platforms.
 
 Highlights: [**devroute**](https://github.com/HKMV/devroute) — a ~3MB dev-time forwarder with an independent "local mirror site" mode and a SOCKS5/HTTP proxy mode; [**tun2proxy-gui**](https://github.com/HKMV/tun2proxy-gui) — a GPUI-based desktop front-end for tun2proxy; [**api-request-analyzer-browser-plugin**](https://github.com/HKMV/api-request-analyzer-browser-plugin) — a Chrome extension that breaks every request into DNS / TCP / TLS / send / wait / download phases.
 
