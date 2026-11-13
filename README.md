@@ -42,7 +42,7 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 |---|---|
 | 系统 | Arch Linux、macOS、Windows |
 | 语言 | Rust、Go、C#、TypeScript、Java、AutoHotkey |
-| 桌面端 | 原生渲染：GPUI、FLTK、iced、egui；WebView 套壳：Tauri、Wails；Java 侧另评估过 JxBrowser；另有 WPF、Svelte |
+| 桌面端 | 原生渲染：GPUI、FLTK、iced、egui；WebView 套壳：Tauri、Wails；Java 侧另评估过 JxBrowser；另有 WPF、Avalonia、Vue、Svelte |
 | 嵌入式 | ESP32 系（ESP32-S3）、Rust no_std（embassy / espflash / embedded-graphics）、LVGL |
 | 服务与运维 | Docker Compose、Caddy、内网穿透与反向代理 |
 | 私有组网 | EasyTier（主用）、NetBird（备用），研究过 Tailscale / ZeroTier / vnt |
@@ -69,13 +69,13 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 
 ## 关注的方向
 
-- **Rust 跨平台桌面与系统层工具**：四种范式都动过手 —— 立即模式（egui）、声明式（iced）、原生绑定（FLTK / GPUI）、WebView 套壳（Tauri / Wails）；套壳这条另有 Java 侧的一档，在 Java 项目里评估过 JxBrowser（TeamDev 的商业 Chromium 组件，Swing / JavaFX / SWT 用）。落到自己项目上选原生渲染，因为**体积与内存占用是硬指标，不是加分项**：一个 3MB、空闲 3.4MB 的转发工具，才有资格让人随手双击起来
-- **AI 编码代理与技能生态**：Claude Code / Codex / MCP / agent skills 的日常重度使用
-- **Windows 与 macOS 提效小工具**：窗口管理、OCR、剪贴板、输入法这一类每天要点几百次的东西
-- **Linux 内核与发行版定制**：日常跑 Arch，也跟内核分支与驱动层的改动（star 里集中在 kernel / tkg / zen 这一类）
-- **嵌入式与 ESP32**：从 ESP32 系入手，主要看 ESP32-S3 + Rust 这条线 —— `espflash` 烧写、`embassy` 异步、`embedded-graphics` 画图，不碰标准库也能把东西跑起来；顺带看 LVGL / TinyGo 这类小屏图形与固件方案，以及「小智」那种端云一体的语音助手怎么做
-- **私有组网与 Mesh VPN**：Tailscale、ZeroTier、NetBird、EasyTier、vnt 都实际部署过，现在**主用 EasyTier、NetBird 留作备用通道**。选型看的是 NAT 穿透成功率、中继是否自己可控、以及多平台（Windows / Arch / macOS / 路由器）部署成本 —— 实践笔记整理在 [mesh-networking-notes](https://github.com/HKMV/mesh-networking-notes)
-- **自建服务与内网基础设施**：能自己搭就不依赖第三方
+- **Rust 跨平台桌面**：原生渲染优先（GPUI / FLTK），egui、iced 动过手，套壳侧看过 Tauri / Wails
+- **AI 编码工具链**：Claude Code / Codex / MCP / agent skills 日常重度使用
+- **提效小工具**：OCR、剪贴板、窗口管理这类每天要点几百次的东西
+- **Linux 内核与发行版**：跑 Arch，跟内核分支与驱动层的改动
+- **嵌入式与 ESP32**：ESP32-S3 + Rust no_std（`espflash` / `embassy` / `embedded-graphics`），也看 LVGL / TinyGo
+- **私有组网**：EasyTier 主用、NetBird 备用；看 NAT 穿透与中继是否自控，笔记在 [mesh-networking-notes](https://github.com/HKMV/mesh-networking-notes)
+- **自建服务**：能自己搭就不依赖第三方
 
 <details>
 <summary>常看常参考 —— 各自解决了我反复遇到的问题</summary>
