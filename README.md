@@ -42,7 +42,6 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 |---|---|
 | 系统 | Arch Linux、macOS、Windows |
 | 语言 | Rust、Go、C#、TypeScript、Java、AutoHotkey |
-| 后端 | Spring Boot、Spring Cloud、MyBatis-Plus；.NET / C# |
 | 桌面端 | Rust 原生：GPUI、FLTK、iced、egui；Rust 套壳：Tauri、Wails；Java：JavaFX、JxBrowser（嵌入 Chromium）；另有 WPF、Avalonia、Vue、Svelte |
 | 嵌入式 | ESP32 系（ESP32-S3）、Rust no_std（embassy / espflash / embedded-graphics）、LVGL |
 | 服务与运维 | Docker Compose、Caddy、内网穿透与反向代理 |
