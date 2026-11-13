@@ -43,6 +43,7 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 | 系统 | Arch Linux、macOS、Windows |
 | 语言 | Rust、Go、C#、TypeScript、Java、AutoHotkey |
 | 桌面端 | GPUI、FLTK、WPF、Svelte |
+| 嵌入式 | ESP32 系（ESP32-S3）、Rust no_std（embassy / espflash / embedded-graphics）、LVGL |
 | 服务与运维 | Docker Compose、Caddy、内网穿透与反向代理 |
 | 私有组网 | EasyTier（主用）、NetBird（备用），研究过 Tailscale / ZeroTier / vnt |
 
@@ -57,11 +58,12 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 | C++ | 192 | C | 187 |
 | C# | 184 | Shell | 97 |
 
-三个观察：
+四个观察：
 
 - **Rust 排第一，且比第二名高 37%** —— 对我是日常主力，不是贴在简历上的标签。
 - **Windows 171 / Linux 160 / macOS 150 三个 topic 几乎并列**，另有 57 个项目同时打了这三平台 —— 跨平台在我这里是前提条件，不是加分项。
 - **AI / LLM 相关 435 个**，其中 MCP（100）、agent（92）、claude-code（97）占大头 —— AI 编码工具链是重度使用，不是浅尝。
+- **嵌入式 29 个，其中 9 个是 Rust** —— 从 ESP32 系往里走，正好接上 no_std 那条线（`embassy` / `espflash` / `embedded-graphics`）。
 
 </details>
 
@@ -71,6 +73,7 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 - **AI 编码代理与技能生态**：Claude Code / Codex / MCP / agent skills 的日常重度使用
 - **Windows 与 macOS 提效小工具**：窗口管理、OCR、剪贴板、输入法这一类每天要点几百次的东西
 - **Linux 内核与发行版定制**：日常跑 Arch，也跟内核分支与驱动层的改动（star 里集中在 kernel / tkg / zen 这一类）
+- **嵌入式与 ESP32**：从 ESP32 系入手，主要看 ESP32-S3 + Rust 这条线 —— `espflash` 烧写、`embassy` 异步、`embedded-graphics` 画图，不碰标准库也能把东西跑起来；顺带看 LVGL / TinyGo 这类小屏图形与固件方案，以及「小智」那种端云一体的语音助手怎么做
 - **私有组网与 Mesh VPN**：Tailscale、ZeroTier、NetBird、EasyTier、vnt 都实际部署过，现在**主用 EasyTier、NetBird 留作备用通道**。选型看的是 NAT 穿透成功率、中继是否自己可控、以及多平台（Windows / Arch / macOS / 路由器）部署成本 —— 实践笔记整理在 [mesh-networking-notes](https://github.com/HKMV/mesh-networking-notes)
 - **自建服务与内网基础设施**：能自己搭就不依赖第三方
 
@@ -107,7 +110,7 @@ Developer working mostly in **Rust**: native cross-platform desktop tools and ne
 
 Highlights: [**devroute**](https://github.com/HKMV/devroute) — a ~3MB dev-time forwarder with an independent "local mirror site" mode and a SOCKS5/HTTP proxy mode; [**tun2proxy-gui**](https://github.com/HKMV/tun2proxy-gui) — a GPUI-based desktop front-end for tun2proxy; [**api-request-analyzer-browser-plugin**](https://github.com/HKMV/api-request-analyzer-browser-plugin) — a Chrome extension that breaks every request into DNS / TCP / TLS / send / wait / download phases.
 
-Interests: Rust desktop & systems tooling, AI coding agents and skills, small Windows/macOS productivity tools, self-hosted services, and private mesh networking — Tailscale / ZeroTier / NetBird / EasyTier / vnt deployed and compared, currently running EasyTier as the primary mesh with NetBird as a backup path.
+Interests: Rust desktop & systems tooling, AI coding agents and skills, small Windows/macOS productivity tools, self-hosted services, private mesh networking — Tailscale / ZeroTier / NetBird / EasyTier / vnt deployed and compared, currently running EasyTier as the primary mesh with NetBird as a backup path — and embedded work on ESP32, mostly the Rust `no_std` stack (`embassy` / `espflash` / `embedded-graphics`).
 
 Star profile (~3.8k): Rust first (625), then Python / TypeScript / Java / Go — 435 repos in AI/LLM with a heavy MCP + agent share, and 57 projects tagged Windows, Linux and macOS at once. What I star is what I actually run.
 
