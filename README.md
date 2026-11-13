@@ -22,11 +22,11 @@
 
 ### [devroute](https://github.com/HKMV/devroute) — 本地开发调试用的转发工具
 
-Rust + FLTK（C++ 库，经 `fltk-rs` 绑定）纯原生 GUI，**3MB** 单文件、GUI 空闲 **3.4MB**、`--headless` **2.5MB**；本地镜像与 SOCKS5/HTTP 代理两种模式各自独立启停，用法与已知边界见 [项目 README](https://github.com/HKMV/devroute)，安装包看 [最新版](https://github.com/HKMV/devroute/releases/latest)。
+Rust + FLTK（C++ 库，经 `fltk-rs` 绑定）纯原生 GUI，单文件 **2.5–4.2MB**（macOS 2.53 / Windows 2.75 / Linux 4.20）、GUI 空闲 **3.4MB**、`--headless` **2.5MB**；本地镜像与 SOCKS5/HTTP 代理两种模式各自独立启停，用法与已知边界见 [项目 README](https://github.com/HKMV/devroute)，安装包看 [最新版](https://github.com/HKMV/devroute/releases/latest)。
 
 ### [tun2proxy-gui](https://github.com/HKMV/tun2proxy-gui) — tun2proxy 的跨平台桌面图形前端
 
-Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四个平台产物 Windows **3.55 MB** / macOS **3.11–3.44 MB** / Linux **7.27 MB**，附 SHA-256 校验。用法与已知边界见 [项目 README](https://github.com/HKMV/tun2proxy-gui)。
+Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四个平台产物 Windows **3.55 MB**、macOS **3.11 MB**（arm64）/**3.44 MB**（x64）、Linux **7.27 MB**，附 SHA-256 校验。用法与已知边界见 [项目 README](https://github.com/HKMV/tun2proxy-gui)。
 
 **也在维护的**：
 
@@ -41,13 +41,14 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 |---|---|
 | 系&nbsp;统 | Arch Linux、macOS、Windows |
 | 语&nbsp;言 | Rust、Go、C#、TypeScript、Java、AutoHotkey |
-| 桌&nbsp;面&nbsp;端 | Rust 原生：GPUI、iced、egui，以及 FLTK（C++ 库，经 `fltk-rs` 绑定）；Rust 套壳：Tauri；Go 套壳：Wails；Java 生态：JavaFX、JxBrowser（嵌入 Chromium）；另有 WPF、Avalonia、Vue、Svelte |
+| 桌&nbsp;面&nbsp;端 | Rust 原生：GPUI、iced、egui，以及 FLTK（C++ 库，经 `fltk-rs` 绑定） |
+| 套&nbsp;壳&nbsp;与&nbsp;其&nbsp;他 | Tauri（Rust）、Wails（Go）、JavaFX 与 JxBrowser（Java 侧，后者嵌入 Chromium），另有 WPF、Avalonia、Vue、Svelte |
 | 嵌&nbsp;入&nbsp;式 | ESP32 系（ESP32-S3）、Rust no_std（embassy / espflash / embedded-graphics）、LVGL |
 | 服&nbsp;务&nbsp;与&nbsp;运&nbsp;维 | Docker Compose、Caddy、内网穿透与反向代理 |
 | 私&nbsp;有&nbsp;组&nbsp;网 | EasyTier（主用）、NetBird（备用），研究过 Tailscale / ZeroTier / vnt |
 
 <details>
-<summary>star 分布（3,787 个）—— 数据比自我介绍更诚实</summary>
+<summary>star 分布（约 3.8k，Top 10 语言）—— 数据比自我介绍更诚实</summary>
 
 | 语言 | 数量 | 语言 | 数量 |
 |---|---|---|---|
@@ -59,7 +60,7 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 
 四个观察：
 
-- **Rust 排第一，且比第二名高 37%** —— 对我是日常主力，不是贴在简历上的标签。
+- **Rust 排第一，比第二的 Python（458）高 37%** —— 对我是日常主力，不是贴在简历上的标签。
 - **Windows 171 / Linux 160 / macOS 150 三个 topic 几乎并列**，另有 57 个项目同时打了这三平台 —— 跨平台在我这里是前提条件，不是加分项。
 - **AI / LLM 相关 435 个**，其中 MCP（100）、agent（92）、claude-code（97）占大头 —— AI 编码工具链是重度使用，不是浅尝。
 - **嵌入式 29 个，其中 9 个是 Rust** —— 从 ESP32 系往里走，正好接上 no_std 那条线（`embassy` / `espflash` / `embedded-graphics`）。
@@ -105,9 +106,9 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 
 ## English
 
-Developer working mostly in **Rust**: native cross-platform desktop tools and network-forwarding utilities — real native GUI, no WebView, single small binary. Has worked across the whole Rust GUI spectrum — immediate mode `egui`, declarative `iced`, Zed's GPU-rendered GPUI, the C++ toolkit FLTK through its `fltk-rs` bindings, and the WebView shell Tauri — plus Wails on the Go side and JxBrowser on the Java side. Picks native rendering because binary size and idle memory are hard requirements, not nice-to-haves. Ships for Windows, macOS and Linux (Arch included), and also runs internal infrastructure (Docker + Caddy) and industrial automation platforms.
+Developer working mostly in **Rust**: native cross-platform desktop tools and network-forwarding utilities — real native GUI, no WebView, single small binary. Has worked across the whole Rust GUI spectrum — immediate mode `egui`, declarative `iced`, Zed's GPU-rendered GPUI, the C++ toolkit FLTK through its `fltk-rs` bindings, and the WebView shell Tauri — plus Wails on the Go side and JavaFX / JxBrowser on the Java side. Picks native rendering because binary size and idle memory are hard requirements, not nice-to-haves. Ships for Windows, macOS and Linux (Arch included), and also runs internal infrastructure (Docker + Caddy) and industrial automation platforms.
 
-Highlights: [**devroute**](https://github.com/HKMV/devroute) — a ~3MB dev-time forwarder with an independent "local mirror site" mode and a SOCKS5/HTTP proxy mode; [**tun2proxy-gui**](https://github.com/HKMV/tun2proxy-gui) — a GPUI-based desktop front-end for tun2proxy; [**api-request-analyzer-browser-plugin**](https://github.com/HKMV/api-request-analyzer-browser-plugin) — a Chrome extension that breaks every request into DNS / TCP / TLS / send / wait / download phases.
+Highlights: [**devroute**](https://github.com/HKMV/devroute) — a 2.5–4.2MB dev-time forwarder with an independent "local mirror site" mode and a SOCKS5/HTTP proxy mode; [**tun2proxy-gui**](https://github.com/HKMV/tun2proxy-gui) — a GPUI-based desktop front-end for tun2proxy; [**api-request-analyzer-browser-plugin**](https://github.com/HKMV/api-request-analyzer-browser-plugin) — a Chrome extension that breaks every request into DNS / TCP / TLS / send / wait / download phases.
 
 Interests: Rust desktop & systems tooling, AI coding agents and skills, small Windows/macOS productivity tools, self-hosted services, private mesh networking — Tailscale / ZeroTier / NetBird / EasyTier / vnt deployed and compared, currently running EasyTier as the primary mesh with NetBird as a backup path — and embedded work on ESP32, mostly the Rust `no_std` stack (`embassy` / `espflash` / `embedded-graphics`).
 
