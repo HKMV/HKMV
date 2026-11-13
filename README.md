@@ -6,8 +6,7 @@
   <samp>
     <a href="https://hkmv.github.io">博客</a> ·
     <a href="https://github.com/HKMV?tab=repositories">项目</a> ·
-    <a href="https://github.com/HKMV/mesh-networking-notes">组网笔记</a> ·
-    <a href="https://github.com/HKMV/devroute/releases/latest">Releases</a>
+    <a href="https://github.com/HKMV/mesh-networking-notes">组网笔记</a>
   </samp>
 </p>
 
