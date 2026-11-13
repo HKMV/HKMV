@@ -23,7 +23,7 @@
 
 ### [devroute](https://github.com/HKMV/devroute) — 本地开发调试用的转发工具
 
-Rust + FLTK 纯原生 GUI，**3MB** 单文件、GUI 空闲 **3.4MB**、`--headless` **2.5MB**；本地镜像与 SOCKS5/HTTP 代理两种模式各自独立启停，用法与已知边界见 [项目 README](https://github.com/HKMV/devroute)。
+Rust + FLTK（C++ 库，经 `fltk-rs` 绑定）纯原生 GUI，**3MB** 单文件、GUI 空闲 **3.4MB**、`--headless` **2.5MB**；本地镜像与 SOCKS5/HTTP 代理两种模式各自独立启停，用法与已知边界见 [项目 README](https://github.com/HKMV/devroute)。
 
 ### [tun2proxy-gui](https://github.com/HKMV/tun2proxy-gui) — tun2proxy 的跨平台桌面图形前端
 
@@ -42,7 +42,7 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 |---|---|
 | 系统 | Arch Linux、macOS、Windows |
 | 语言 | Rust、Go、C#、TypeScript、Java、AutoHotkey |
-| 桌面端 | Rust 原生：GPUI、FLTK、iced、egui；Rust 套壳：Tauri；Go 套壳：Wails；Java：JavaFX、JxBrowser（嵌入 Chromium）；另有 WPF、Avalonia、Vue、Svelte |
+| 桌面端 | Rust 原生：GPUI、iced、egui，以及 FLTK（C++ 库，经 `fltk-rs` 绑定）；Rust 套壳：Tauri；Go 套壳：Wails；Java 生态：JavaFX、JxBrowser（嵌入 Chromium）；另有 WPF、Avalonia、Vue、Svelte |
 | 嵌入式 | ESP32 系（ESP32-S3）、Rust no_std（embassy / espflash / embedded-graphics）、LVGL |
 | 服务与运维 | Docker Compose、Caddy、内网穿透与反向代理 |
 | 私有组网 | EasyTier（主用）、NetBird（备用），研究过 Tailscale / ZeroTier / vnt |
@@ -69,7 +69,7 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 
 ## 关注的方向
 
-- **Rust 跨平台桌面**：原生渲染优先（GPUI / FLTK），egui、iced 动过手，套壳侧看过 Tauri（Rust）与 Wails（Go）
+- **Rust 跨平台桌面**：原生渲染优先（GPUI；FLTK 走 `fltk-rs` 绑定），egui、iced 动过手，套壳侧看过 Tauri（Rust）与 Wails（Go）
 - **AI 编码工具链**：Claude Code / Codex / MCP / agent skills 日常重度使用
 - **提效小工具**：OCR、剪贴板、窗口管理这类每天要点几百次的东西
 - **Linux 内核与发行版**：跑 Arch，跟内核分支与驱动层的改动
@@ -83,9 +83,9 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 - [**caddy**](https://github.com/caddyserver/caddy) — 自动 HTTPS 的配置模型，反向代理的默认选择
 - [**frp**](https://github.com/fatedier/frp) — 内网穿透里实现读起来最省力的一个，协议设计值得抄
 - [**tauri**](https://github.com/tauri-apps/tauri) — 套壳方案里最克制的一档，用它的边界在哪很清楚
-- [**rustdesk**](https://github.com/rustdesk/rustdesk) — Rust 写跨平台桌面 + 自建中继的完整样本
+- [**rustdesk**](https://github.com/rustdesk/rustdesk) — Rust 核心 + Flutter 界面，加自建中继，跨平台桌面的完整样本
 - [**yazi**](https://github.com/sxyazi/yazi) — 终端界面的异步与渲染组织方式
-- [**sniffnet**](https://github.com/GyulyVGC/sniffnet) — 流量可视化的渲染思路，跟 GPUI 那套可以对照看
+- [**sniffnet**](https://github.com/GyulyVGC/sniffnet) — 流量可视化的渲染思路，它自己用 iced 写，可以跟 GPUI 那套对照看
 - [**alacritty**](https://github.com/alacritty/alacritty) — GPU 渲染终端的性能下限
 - [**immich**](https://github.com/immich-app/immich) — 自建服务的完备度参照：备份、迁移、升级路径是否写清楚
 
@@ -106,7 +106,7 @@ Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四�
 
 ## English
 
-Developer working mostly in **Rust**: native cross-platform desktop tools and network-forwarding utilities — real native GUI, no WebView, single small binary. Has worked across the whole Rust GUI spectrum — immediate mode `egui`, declarative `iced`, native bindings FLTK / GPUI, and the WebView shell Tauri — plus Wails on the Go side and JxBrowser on the Java side. Picks native rendering because binary size and idle memory are hard requirements, not nice-to-haves. Ships for Windows, macOS and Linux (Arch included), and also runs internal infrastructure (Docker + Caddy) and industrial automation platforms.
+Developer working mostly in **Rust**: native cross-platform desktop tools and network-forwarding utilities — real native GUI, no WebView, single small binary. Has worked across the whole Rust GUI spectrum — immediate mode `egui`, declarative `iced`, Zed's GPU-rendered GPUI, the C++ toolkit FLTK through its `fltk-rs` bindings, and the WebView shell Tauri — plus Wails on the Go side and JxBrowser on the Java side. Picks native rendering because binary size and idle memory are hard requirements, not nice-to-haves. Ships for Windows, macOS and Linux (Arch included), and also runs internal infrastructure (Docker + Caddy) and industrial automation platforms.
 
 Highlights: [**devroute**](https://github.com/HKMV/devroute) — a ~3MB dev-time forwarder with an independent "local mirror site" mode and a SOCKS5/HTTP proxy mode; [**tun2proxy-gui**](https://github.com/HKMV/tun2proxy-gui) — a GPUI-based desktop front-end for tun2proxy; [**api-request-analyzer-browser-plugin**](https://github.com/HKMV/api-request-analyzer-browser-plugin) — a Chrome extension that breaks every request into DNS / TCP / TLS / send / wait / download phases.
 
