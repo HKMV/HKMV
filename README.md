@@ -27,7 +27,7 @@ Rust + FLTK 纯原生 GUI，**3MB** 单文件、GUI 空闲 **3.4MB**、`--headle
 
 ### [tun2proxy-gui](https://github.com/HKMV/tun2proxy-gui) — tun2proxy 的跨平台桌面图形前端
 
-Rust + [GPUI](https://github.com/zed-industries/zed/tree/main/crates/gpui)（Zed 的 GPU 渲染 UI 框架），不依赖 WebView。多套代理配置一键切换、启动前预检上游代理、自动下载并校验 tun2proxy 官方二进制（SHA-256）、实时日志与流量图、分流规则清单单独开关、中英文界面、系统托盘。
+Rust + GPUI（Zed 的 GPU 渲染 UI 框架），不依赖 WebView；v0.6.1 四个平台产物 Windows **3.55 MB** / macOS **3.11–3.44 MB** / Linux **7.27 MB**，附 SHA-256 校验。用法与已知边界见 [项目 README](https://github.com/HKMV/tun2proxy-gui)。
 
 **也在维护的**：
 
