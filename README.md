@@ -54,11 +54,30 @@ Go CLI，解析 Linux `atop` rawlog（针对 atop 2.10），终端输出 CPU / �
 | 服务与运维 | Docker Compose、Caddy、内网穿透与反向代理 |
 | 私有组网 | EasyTier（主用）、NetBird（备用），研究过 Tailscale / ZeroTier / vnt |
 
+## star 都在哪
+
+> 3,787 个 star（含 GitHub 分组）摊开看，比自我介绍更诚实。
+
+| 语言 | 数量 | 语言 | 数量 |
+|---|---|---|---|
+| Rust | 625 | Python | 458 |
+| TypeScript | 434 | Java | 360 |
+| Go | 349 | JavaScript | 289 |
+| C++ | 192 | C | 187 |
+| C# | 184 | Shell | 97 |
+
+三个观察：
+
+- **Rust 排第一，且比第二名高 37%** —— 对我是日常主力，不是贴在简历上的标签。
+- **Windows 171 / Linux 160 / macOS 150 三个 topic 几乎并列**，另有 57 个项目同时打了这三平台 —— 跨平台在我这里是前提条件，不是加分项。
+- **AI / LLM 相关 435 个**，其中 MCP（100）、agent（92）、claude-code（97）占大头 —— AI 编码工具链是重度使用，不是浅尝。
+
 ## 关注的方向
 
 - **Rust 跨平台桌面与系统层工具**：原生渲染优先于套壳，体积与内存占用优先于功能堆叠
 - **AI 编码代理与技能生态**：Claude Code / Codex / MCP / agent skills 的日常重度使用
 - **Windows 与 macOS 提效小工具**：窗口管理、OCR、剪贴板、输入法这一类每天要点几百次的东西
+- **Linux 内核与发行版定制**：日常跑 Arch，也跟内核分支与驱动层的改动（star 里集中在 kernel / tkg / zen 这一类）
 - **私有组网与 Mesh VPN**：Tailscale、ZeroTier、NetBird、EasyTier、vnt 都实际部署过，现在**主用 EasyTier、NetBird 留作备用通道**。选型看的是 NAT 穿透成功率、中继是否自己可控、以及多平台（Windows / Arch / macOS / 路由器）部署成本 —— 实践笔记整理在 [mesh-networking-notes](https://github.com/HKMV/mesh-networking-notes)
 - **自建服务与内网基础设施**：能自己搭就不依赖第三方
 
@@ -75,6 +94,19 @@ Go CLI，解析 Linux `atop` rawlog（针对 atop 2.10），终端输出 CPU / �
 
 </details>
 
+## 常看常参考
+
+从 star 里挑的，不是因为有名，是各自解决了我反复遇到的问题：
+
+- [**caddy**](https://github.com/caddyserver/caddy) — 自动 HTTPS 的配置模型，反向代理的默认选择
+- [**frp**](https://github.com/fatedier/frp) — 内网穿透里实现读起来最省力的一个，协议设计值得抄
+- [**tauri**](https://github.com/tauri-apps/tauri) — 套壳方案里最克制的一档，用它的边界在哪很清楚
+- [**rustdesk**](https://github.com/rustdesk/rustdesk) — Rust 写跨平台桌面 + 自建中继的完整样本
+- [**yazi**](https://github.com/sxyazi/yazi) — 终端界面的异步与渲染组织方式
+- [**sniffnet**](https://github.com/GyulyVGC/sniffnet) — 流量可视化的渲染思路，跟 GPUI 那套可以对照看
+- [**alacritty**](https://github.com/alacritty/alacritty) — GPU 渲染终端的性能下限
+- [**immich**](https://github.com/immich-app/immich) — 自建服务的完备度参照：备份、迁移、升级路径是否写清楚
+
 ---
 
 ## English
@@ -84,5 +116,7 @@ Developer working mostly in **Rust**: native cross-platform desktop tools and ne
 Highlights: [**devroute**](https://github.com/HKMV/devroute) — a ~3MB dev-time forwarder with an independent "local mirror site" mode and a SOCKS5/HTTP proxy mode; [**tun2proxy-gui**](https://github.com/HKMV/tun2proxy-gui) — a GPUI-based desktop front-end for tun2proxy; [**api-request-analyzer-browser-plugin**](https://github.com/HKMV/api-request-analyzer-browser-plugin) — a Chrome extension that breaks every request into DNS / TCP / TLS / send / wait / download phases.
 
 Interests: Rust desktop & systems tooling, AI coding agents and skills, small Windows/macOS productivity tools, self-hosted services, and private mesh networking — Tailscale / ZeroTier / NetBird / EasyTier / vnt deployed and compared, currently running EasyTier as the primary mesh with NetBird as a backup path.
+
+Star profile (~3.8k): Rust first (625), then Python / TypeScript / Java / Go — 435 repos in AI/LLM with a heavy MCP + agent share, and 57 projects tagged Windows, Linux and macOS at once. What I star is what I actually run.
 
 Blog: https://hkmv.github.io
