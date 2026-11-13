@@ -4,7 +4,7 @@
 
 > 写工具的人：把反复出现的麻烦事，做成一个双击就能用的程序。
 
-后端出身，现在主要用 **Rust** 写跨平台桌面工具与网络转发类软件 —— 原生 GUI、不套 WebView、单文件即拷即用。同时做内网运维与自动化（MES / 订单自动化平台），以及 AI 编码工具链的日常实践。
+后端出身，现在主要用 **Rust** 写跨平台桌面工具与网络转发类软件 —— 原生 GUI、不套 WebView、单文件即拷即用。同时做内网运维与自动化（MES / 订单自动化平台），以及 AI 编码工具链的日常实践。网络这块偏底层：写过本地转发与 SOCKS5/HTTP 代理，也长期折腾私有组网（Mesh VPN）的选型与落地。
 
 - 在做：[devroute](https://github.com/HKMV/devroute)（本地开发转发）、[tun2proxy-gui](https://github.com/HKMV/tun2proxy-gui)（tun2proxy 桌面前端）
 - 在学：系统层网络（TUN / 分流规则）、GPU 渲染的原生 UI
@@ -52,12 +52,14 @@ Go CLI，解析 Linux `atop` rawlog（针对 atop 2.10），终端输出 CPU / �
 | 语言 | Rust、Go、C#、TypeScript、Java、AutoHotkey |
 | 桌面端 | GPUI、FLTK、WPF、Svelte |
 | 服务与运维 | Docker Compose、Caddy、内网穿透与反向代理 |
+| 私有组网 | EasyTier（主用）、NetBird（备用），研究过 Tailscale / ZeroTier / vnt |
 
 ## 关注的方向
 
 - **Rust 跨平台桌面与系统层工具**：原生渲染优先于套壳，体积与内存占用优先于功能堆叠
 - **AI 编码代理与技能生态**：Claude Code / Codex / MCP / agent skills 的日常重度使用
 - **Windows 与 macOS 提效小工具**：窗口管理、OCR、剪贴板、输入法这一类每天要点几百次的东西
+- **私有组网与 Mesh VPN**：Tailscale、ZeroTier、NetBird、EasyTier、vnt 都实际部署过，现在**主用 EasyTier、NetBird 留作备用通道**。选型看的是 NAT 穿透成功率、中继是否自己可控、以及多平台（Windows / Arch / macOS / 路由器）部署成本
 - **自建服务与内网基础设施**：能自己搭就不依赖第三方
 
 ## 其它项目
@@ -81,6 +83,6 @@ Developer working mostly in **Rust**: native cross-platform desktop tools and ne
 
 Highlights: [**devroute**](https://github.com/HKMV/devroute) — a ~3MB dev-time forwarder with an independent "local mirror site" mode and a SOCKS5/HTTP proxy mode; [**tun2proxy-gui**](https://github.com/HKMV/tun2proxy-gui) — a GPUI-based desktop front-end for tun2proxy; [**api-request-analyzer-browser-plugin**](https://github.com/HKMV/api-request-analyzer-browser-plugin) — a Chrome extension that breaks every request into DNS / TCP / TLS / send / wait / download phases.
 
-Interests: Rust desktop & systems tooling, AI coding agents and skills, small Windows/macOS productivity tools, self-hosted services.
+Interests: Rust desktop & systems tooling, AI coding agents and skills, small Windows/macOS productivity tools, self-hosted services, and private mesh networking — Tailscale / ZeroTier / NetBird / EasyTier / vnt deployed and compared, currently running EasyTier as the primary mesh with NetBird as a backup path.
 
 Blog: https://hkmv.github.io
