@@ -22,7 +22,7 @@
 
 ### [devroute](https://github.com/HKMV/devroute) — 本地开发调试用的转发工具
 
-Rust + FLTK（C++ 库，经 `fltk-rs` 绑定）纯原生 GUI，**3MB** 单文件、GUI 空闲 **3.4MB**、`--headless` **2.5MB**；本地镜像与 SOCKS5/HTTP 代理两种模式各自独立启停，用法与已知边界见 [项目 README](https://github.com/HKMV/devroute)。
+Rust + FLTK（C++ 库，经 `fltk-rs` 绑定）纯原生 GUI，**3MB** 单文件、GUI 空闲 **3.4MB**、`--headless` **2.5MB**；本地镜像与 SOCKS5/HTTP 代理两种模式各自独立启停，用法与已知边界见 [项目 README](https://github.com/HKMV/devroute)，安装包看 [最新版](https://github.com/HKMV/devroute/releases/latest)。
 
 ### [tun2proxy-gui](https://github.com/HKMV/tun2proxy-gui) — tun2proxy 的跨平台桌面图形前端
 
