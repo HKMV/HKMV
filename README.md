@@ -59,7 +59,7 @@ Go CLI，解析 Linux `atop` rawlog（针对 atop 2.10），终端输出 CPU / �
 - **Rust 跨平台桌面与系统层工具**：原生渲染优先于套壳，体积与内存占用优先于功能堆叠
 - **AI 编码代理与技能生态**：Claude Code / Codex / MCP / agent skills 的日常重度使用
 - **Windows 与 macOS 提效小工具**：窗口管理、OCR、剪贴板、输入法这一类每天要点几百次的东西
-- **私有组网与 Mesh VPN**：Tailscale、ZeroTier、NetBird、EasyTier、vnt 都实际部署过，现在**主用 EasyTier、NetBird 留作备用通道**。选型看的是 NAT 穿透成功率、中继是否自己可控、以及多平台（Windows / Arch / macOS / 路由器）部署成本
+- **私有组网与 Mesh VPN**：Tailscale、ZeroTier、NetBird、EasyTier、vnt 都实际部署过，现在**主用 EasyTier、NetBird 留作备用通道**。选型看的是 NAT 穿透成功率、中继是否自己可控、以及多平台（Windows / Arch / macOS / 路由器）部署成本 —— 实践笔记整理在 [mesh-networking-notes](https://github.com/HKMV/mesh-networking-notes)
 - **自建服务与内网基础设施**：能自己搭就不依赖第三方
 
 ## 其它项目
